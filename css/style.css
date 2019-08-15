@@ -114,14 +114,13 @@ body, p, h1, h2, h3, h4, h5, h6,  {
     font-weight: 400;
 	color:#c9bc9c;
 	text-align: center;
-    letter-spacing: 2px;
-}
+    }
 
 .myturn_2{
 	font-family: "Noto Sans TC", sans-serif;
     font-weight: 400;
 	color:#c9bc9c;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .myturn_3{
@@ -160,7 +159,6 @@ body, p, h1, h2, h3, h4, h5, h6,  {
 	font-family: "Noto Sans TC", sans-serif;
     font-weight: 300;
 	color:#000000;
-    letter-spacing: 3px;
 	
 }
 
@@ -438,7 +436,7 @@ text-decoration:#000000;
 }
 
 #myBtn:hover {
-    background-color: #555;
+    background-color: #871c35;
 }
 
 /*gotop按鈕語法*/
