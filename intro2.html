@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="新中華王朝以數位資訊系統為自身定位，多角化經營金融產業，營業項目涵蓋了金融品牌行銷、網站整體規劃、整體CIS設計、銀聯卡代辦推廣服務、廣告宣傳、講師及相關金融商品課程…" />
+    <meta name="keywords" content="新中華,基金,外匯,外幣,投資,銀聯卡,國際銀聯卡,信用卡,科技,講師,碳權,軟件" />
+    <meta property="og:title" content="新中華王朝全球投資有限公司" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.ncd.news/index.html" />
+    <meta property="og:image" content="http://www.ncd.news/images/logo.png" />
+    <meta property="og:description" content="新中華,基金,外匯,外幣,投資,銀聯卡,國際銀聯卡,信用卡,科技,講師,碳權,軟件" />
+    <meta property="og:site_name" content="新中華王朝全球投資有限公司" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>新中華王朝官網</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional" rel="stylesheet">
+</head>
+<script type="text/javascript" language="JavaScript">
+    // 產生區域
+    function SelZero(strCode) {
+        document.forms["FormCode"].Zero.options.length = 0; // 動態控制表單物件方法一
+        document.FormCode.Zero.options.length = 0; // 動態控制表單物件方法二
+        document.getElementById("Zero").options.length = 0; // 動態控制表單物件方法三
+
+        if (strCode == 0) // 第一個條件如果 縣市 選擇第一個的話則新增一個 Option
+        {
+            document.getElementById("Zero").options[0] = new Option("請選擇縣市..", "");
+        } else {
+            document.getElementById("Zero").options[0] = new Option("請選擇區域..", "0"); // 設定第一個選項
+
+
+            var Zero =
+                new Array( // 1維陣列
+                    // 臺北市
+                    new Array( // 2維陣列
+                        new Array("中正區", "大同區", "中山區", "松山區", "大安區", "萬華區", "信義區", // 3維陣列
+                            "士林區", "北投區", "內湖區", "南港區", "文山區"),
+                        new Array("100", "103", "104", "105", "106", "108", "110", "111", "112", "114", "115", "116")
+                    ),
+                    // 基隆市
+                    new Array(
+                        new Array("仁愛區", "信義區", "中正區", "中山區", "安樂區", "暖暖區", "七堵區"),
+                        new Array("200", "201", "202", "203", "204", "205", "206")
+                    ),
+                    // 新北市
+                    new Array(
+                        new Array("萬里區", "金山區", "板橋區", "汐止區", "深坑區", "石碇區", "瑞芳區",
+                            "平溪區", "雙溪區", "貢寮區", "新店區", "坪林區", "烏來區", "永和區",
+                            "中和區", "土城區", "三峽區", "樹林區", "鶯歌區", "三重區", "新莊區",
+                            "泰山區", "林口區", "蘆洲區", "五股區", "八里區", "淡水區", "三芝區",
+                            "石門區"),
+                        new Array("207", "208", "220", "221", "222", "223", "224", "226", "227", "228", "231", "232", "233", "234", "235", "236", "237", "238", "239", "241", "242", "243", "244", "247", "248", "249", "251", "252", "253")
+                    ),
+                    // 宜蘭縣
+                    new Array(
+                        new Array("宜蘭市", "頭城鎮", "礁溪鄉", "壯圍鄉", "員山鄉", "羅東鎮", "三星鄉",
+                            "大同鄉", "五結鄉", "冬山鄉", "蘇澳鎮", "南澳鄉"),
+                        new Array("260", "261", "262", "263", "264", "265", "266", "267", "268", "269", "270", "272")
+                    ),
+                    // 新竹縣市
+                    new Array(
+                        new Array("新竹市", "竹北市", "湖口鄉", "新豐鄉", "新埔鎮", "關西鎮", "芎林鄉",
+                            "寶山鄉", "竹東鎮", "五峰鄉", "橫山鄉", "尖石鄉", "北埔鄉", "峨眉鄉"),
+                        new Array("300", "302", "303", "304", "305", "306", "307", "308", "310", "311", "312", "313", "314", "315")
+                    ),
+                    // 桃園縣
+                    new Array(
+                        new Array("中壢區", "平鎮區", "龍潭區", "楊梅區", "新屋區", "觀音區", "桃園區",
+                            "龜山區", "龜山區", "八德區", "大溪區", "復興區", "大園區", "蘆竹區"),
+                        new Array("320", "324", "325", "326", "327", "328", "330", "330", "333", "334", "335", "336", "337", "338")
+                    ),
+                    // 苗栗縣
+                    new Array(
+                        new Array("竹南鎮", "頭份鎮", "三灣鄉", "南庄鄉", "獅潭鄉", "後龍鎮", "通霄鎮",
+                            "苑裡鎮", "苗栗市", "造橋鄉", "頭屋鄉", "公館鄉", "大湖鄉", "泰安鄉",
+                            "銅鑼鄉", "三義鄉", "西湖鄉", "卓蘭鎮"),
+                        new Array("350", "351", "352", "353", "354", "356", "357", "358", "360", "361", "362", "363", "364", "365", "366", "367", "368", "369")
+                    ),
+                    // 臺中市
+                    //new Array(
+                    //new Array("中　區", "東　區", "南　區", "西　區", "北　區", "北屯區", "西屯區", "南屯區"),
+                    //  new Array("400", "401", "402", "403", "404", "406", "407", "408")
+                    //),
+                    // 臺中縣
+                    new Array(
+                        new Array("中　區", "東　區", "南　區", "西　區", "北　區", "北屯區", "西屯區", "南屯區", "太平區", "大里區", "霧峰區", "烏日區", "豐原區", "后里區", "石岡區", "東勢區",
+                            "和平區", "新社區", "潭子區", "大雅區", "神岡區", "大肚區", "沙鹿區", "龍井區",
+                            "梧棲區", "清水區", "大甲區", "外埔區", "大安區"),
+                        new Array("400", "401", "402", "403", "404", "406", "407", "408", "411", "412", "413", "414", "420", "421", "422", "423", "424", "426", "427", "428", "429", "432", "433", "434", "435", "436", "437", "438", "439")
+                    ),
+                    // 彰化縣
+                    new Array(
+                        new Array("彰化市", "芬園鄉", "花壇鄉", "秀水鄉", "鹿港鎮", "福興鄉", "線西鄉", "和美鎮",
+                            "伸港鄉", "員林鎮", "社頭鄉", "永靖鄉", "埔心鄉", "溪湖鎮", "大村鄉", "埔鹽鄉",
+                            "田中鎮", "北斗鎮", "田尾鄉", "埤頭鄉", "溪州鄉", "竹塘鄉", "二林鎮", "大城鄉",
+                            "芳苑鄉", "二水鄉"),
+                        new Array("500", "502", "503", "504", "505", "506", "507", "508", "509", "510", "511", "512", "513", "514", "515", "516", "520", "521", "522", "523", "524", "525", "526", "527", "528", "530")
+                    ),
+                    // 南投縣
+                    new Array(
+                        new Array("南投市", "中寮鄉", "草屯鎮", "國姓鄉", "埔里鎮", "仁愛鄉", "名間鄉", "集集鎮",
+                            "水里鄉", "魚池鄉", "信義鄉", "竹山鎮", "鹿谷鄉"),
+                        new Array("540", "541", "542", "544", "545", "546", "551", "552", "553", "555", "556", "557", "558")
+                    ),
+                    // 嘉義縣市
+                    new Array(
+                        new Array("嘉義市", "番路鄉", "梅山鄉", "竹崎鄉", "阿里山", "中埔鄉", "大埔鄉", "水上鄉",
+                            "鹿草鄉", "太保市", "朴子市", "東石鄉", "六腳鄉", "新港鄉", "民雄鄉", "大林鎮",
+                            "溪口鄉", "義竹鄉", "布袋鎮"),
+                        new Array("600", "602", "603", "604", "605", "606", "607", "608", "611", "612", "613", "614", "615", "616", "621", "622", "623", "624", "625")
+                    ),
+                    // 雲林縣
+                    new Array(
+                        new Array("斗南鎮", "大埤鄉", "虎尾鎮", "土庫鎮", "褒忠鄉", "東勢鄉", "台西鄉", "崙背鄉",
+                            "麥寮鄉", "斗六市", "林內鄉", "古坑鄉", "莿桐鄉", "西螺鎮", "二崙鄉", "北港鎮",
+                            "水林鄉", "口湖鄉", "四湖鄉", "元長鄉"),
+                        new Array("630", "631", "632", "633", "634", "635", "636", "637", "638", "640", "643", "646", "647", "648", "649", "651", "652", "653", "654", "655")
+                    ),
+                    // 臺南市
+                    //new Array(
+                    // new Array("中西區", "東　區", "南　區", "北　區", "安平區", "安南區"),
+                    //  new Array("700", "701", "702", "704", "708", "709")
+                    //),
+                    // 臺南縣
+                    new Array(
+                        new Array("中西區", "東　區", "南　區", "北　區", "安平區", "安南區", "永康區", "歸仁區", "新化區", "左鎮區", "玉井區", "楠西區", "南化區", "仁德區",
+                            "關廟區", "龍崎區", "官田區", "麻豆區", "佳里區", "西港區", "七股區", "將軍區",
+                            "學甲區", "北門區", "新營區", "後壁區", "白河區", "東山區", "六甲區", "下營區",
+                            "柳營區", "鹽水區", "善化區", "新市區", "大內區", "山上區", "新市區", "安定區"),
+                        new Array("700", "701", "702", "704", "708", "709", "710", "711", "712", "713", "714", "715", "716", "717", "718", "719", "720", "721", "722", "723", "724", "725", "726", "727", "730", "731", "732", "733", "734", "735", "736", "737",
+                            "741", "741", "742", "743", "744", "745")
+                    ),
+                    // 高雄市
+                    //new Array(
+                    //  new Array("新興區", "前金區", "苓雅區", "鹽埕區", "鼓山區", "旗津區", "前鎮區", "三民區",
+                    //   "楠梓區", "小港區", "左營區"),
+                    //  new Array("800", "801", "802", "803", "804", "805", "806", "807", "811", "812", "813")
+                    // ),
+                    // 高雄縣
+                    new Array(
+                        new Array("新興區", "前金區", "苓雅區", "鹽埕區", "鼓山區", "旗津區", "前鎮區", "三民區",
+                            "楠梓區", "小港區", "左營區", "仁武區", "大社區", "岡山鎮", "路竹區", "阿蓮區", "田寮區", "燕巢區", "橋頭區",
+                            "梓官區", "彌陀區", "永安區", "湖內區", "鳳山區", "大寮區", "林園區", "鳥松區",
+                            "大樹區", "旗山區", "美濃區", "六龜區", "內門區", "杉林區", "甲仙區", "桃源區",
+                            "三民區", "茂林區", "茄萣區"),
+                        new Array("800", "801", "802", "803", "804", "805", "806", "807", "811", "812", "813", "814", "815", "820", "821", "822", "823", "824", "825", "826", "827", "828", "829", "830", "831", "832", "833", "840", "842", "843", "844", "845",
+                            "846", "847", "848", "849", "851", "852")
+                    ),
+                    // 澎湖縣
+                    new Array(
+                        new Array("馬公市", "西嶼鄉", "望安鄉", "七美鄉", "白沙鄉", "湖西鄉"),
+                        new Array("880", "881", "882", "883", "884", "885")
+                    ),
+                    // 屏東縣
+                    new Array(
+                        new Array("屏東市", "三地門", "霧台鄉", "瑪家鄉", "九如鄉", "里港鄉", "高樹鄉", "鹽埔鄉",
+                            "長治鄉", "麟洛鄉", "竹田鄉", "內埔鄉", "萬丹鄉", "潮州鎮", "泰武鄉", "來義鄉",
+                            "萬巒鄉", "崁頂鄉", "新埤鄉", "南州鄉", "林邊鄉", "東港鎮", "琉球鄉", "佳冬鄉",
+                            "新園鄉", "枋寮鄉", "枋山鄉", "春日鄉", "獅子鄉", "車城鄉", "牡丹鄉", "恆春鎮",
+                            "滿州鄉"),
+                        new Array("900", "901", "902", "903", "904", "905", "906", "907", "908", "909", "911", "912", "913", "920", "921", "922", "923", "924", "925", "926", "927", "928", "929", "931", "932", "940", "941", "942", "943", "944", "945", "946",
+                            "947")
+                    ),
+                    // 臺東縣
+                    new Array(
+                        new Array("台東市", "綠島鄉", "蘭嶼鄉", "延平鄉", "卑南鄉", "鹿野鄉", "關山鎮", "海端鄉",
+                            "池上鄉", "東河鄉", "成功鎮", "長濱鄉", "太麻里", "金峰鄉", "大武鄉", "達仁鄉"),
+                        new Array("950", "951", "952", "953", "954", "955", "956", "957", "958", "959", "961", "962", "963", "964", "965", "966")
+                    ),
+                    // 花蓮縣
+                    new Array(
+                        new Array("花蓮市", "新城鄉", "秀林鄉", "吉安鄉", "壽豐鄉", "鳳林鎮", "光復鄉", "豐濱鄉",
+                            "瑞穗鄉", "萬榮鄉", "玉里鎮", "卓溪鄉", "富里鄉"),
+                        new Array("970", "971", "972", "973", "974", "975", "976", "977", "978", "979", "981", "982", "983")
+                    ),
+                    // 金門縣
+                    new Array(
+                        new Array("金沙鎮", "金湖鎮", "金寧鄉", "金城鎮", "烈嶼鄉", "烏坵鄉"),
+                        new Array("890", "891", "892", "893", "894", "896")
+                    ),
+                    // 連江縣
+                    new Array(
+                        new Array("南竿鄉", "北竿鄉", "莒光鄉", "東引鄉"),
+                        new Array("209", "210", "211", "212")
+                    ),
+                    // 南海諸島
+                    new Array(
+                        new Array("東　沙", "南　沙"),
+                        new Array("817", "819")
+                    ),
+                    // 釣魚台列嶼
+                    new Array(
+                        new Array("釣魚台列嶼"),
+                        new Array("290")
+                    )
+                );
+
+            // 迴圈開始新增出Option
+            // Zero[strCode - 1][0].length 取得第3維資料中的長度
+            for (i = 0; i <= Zero[strCode - 1][0].length - 1; i++) {
+                // 產生選項內容
+                document.getElementById("Zero").options[i + 1] = new Option(Zero[strCode - 1][1][i] + " | " + Zero[strCode - 1][0][i], Zero[strCode - 1][1][i]);
+            }
+
+        }
+        document.getElementById("Zero").options[0].selected = true;
+
+    }
+</script>
+
+<body>
+    <!-- 固定在頂端-->
+    <div class="sticky-top">
+        <!-- 固定在頂端-->
+        <nav class="navbar  navbar-expand-lg navbar-light  index_text">
+            <div class="container-fluid ">
+                <!-- 此次有沒加 row 有差 -->
+                <!-- 我漏掉的一行-->
+                <div><a class="navbar-brand d-block " href="index.html">
+                        <div id="DIV_SMALL" src="images/index/logo150.jpg"></div>
+                    </a></div>
+                <!-- 我漏掉的一行-->
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <!-- ml表示靠右，mr表示靠左 , mx表示 ?-->
+                        <li class="nav-item justify-content-center tt">
+                            <a class="nav-link" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item justify-content-center tt">
+                            <a class="nav-link" href="movie.html">影片介紹</a>
+                        </li>
+                        <li class="nav-item dropdown  tt">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="a1">企業概況</a>
+                            <div class="dropdown-menu upfont" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="indust1.html">公司簡介</a>
+                                <a class="dropdown-item" href="indust2.html">投資策略</a>
+                                <a class="dropdown-item" href="indust3.html">我們的優勢</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown tt">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="b1">資質認證</a>
+                            <div class="dropdown-menu upfont" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="quality1.html">持牌認證</a>
+                                <a class="dropdown-item" href="quality2.html">資金保管</a>
+                                <a class="dropdown-item" href="quality3.html">合規風控</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown tt">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="c1">公司實力</a>
+                            <div class="dropdown-menu upfont" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="company1.html">股東背景</a>
+                                <a class="dropdown-item" href="company2.html">團隊介紹</a>
+                                <a class="dropdown-item" href="company3.html">業務介紹</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown tt">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="d1">產品相關</a>
+                            <div class="dropdown-menu upfont" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="product1.html">關於產品</a>
+                                <a class="dropdown-item" href="product2.html">交易須知</a>
+                                <a class="dropdown-item" href="product3.html">下載專區</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown tt">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="e1">新聞動態</a>
+                            <div class="dropdown-menu upfont" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="news1.html">經濟時事</a>
+                                <a class="dropdown-item" href="news2.html">投資理財</a>
+                                <a class="dropdown-item" href="news3.html">財經新聞</a>
+                            </div>
+                        </li>
+                        <li class="nav-item tt">
+                            <a class="nav-link" href="service1.html">客服聯繫</a>
+                        </li>
+                        <li class="nav-item tt">
+                            <a class="nav-link" href="intro1.html">理財進入</a>
+                        </li>
+                        <li class="nav-item tt">
+                            <a class="nav-link" href=""></a>
+                        </li>
+                        <li class="nav-item tt">
+                            <a class="nav-link" href=""></a>
+
+                        </li>
+                        <li class="nav-item  tt1">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2"> <a class="nav-link tt2" href="101new.html">English/</a></div>
+                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2"> <a class="nav-link" href="101new.html">简/</a></div>
+                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2"><a class="nav-link" href="101new.html">繁</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- 固定在頂端-->
+    <div class="container-fluid">
+        <div class="row intro justify-content-center align-items-center">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4 ">
+                <h2 class="pt-5 pb-5 myturn">加入會員</h2>
+                <hr class="hr_every">
+                <div class="text_rule_1 pt-5">
+
+                    <p></p>
+                    <form>
+                        <div class="form-group row text-left">
+                            <label for="inputAcconut" class="col-sm-3 col-form-label"><span class="answer_2">*</span>帳號</label>
+                            <div class="col-sm-8">
+                                <input type="account" class="form-control" id="inputAccount" placeholder="請填入6至16個字元的英文字母、數字組合">
+                            </div>
+                        </div>
+                        <div class="form-group row text-left">
+                            <label for="inputPass" class="col-sm-3 col-form-label"><span class="answer_2">*</span>密碼</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="inputPass" placeholder="請填入6至16個字元的英文字母、數字組合">
+                            </div>
+                        </div>
+                        <div class="form-group row text-left">
+                            <label for="inputRepass" class="col-sm-3 col-form-label"><span class="answer_2">*</span>確認密碼</label>
+                            <div class="col-sm-8">
+                                <input type="repassword" class="form-control" id="inputRepass" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row text-left">
+                            <label for="inputName" class="col-sm-3 col-form-label"><span class="answer_2">*</span>姓名</label>
+                            <div class="col-sm-8">
+                                <input type="name" class="form-control" id="inputName" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row text-left">
+                            <label for="inputEmail" class="col-sm-3 col-form-label"><span class="answer_2">*</span>電子郵件</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="">
+                            </div>
+                        </div>
+                        <fieldset class="form-group text-left">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-3 pt-0">性別</legend>
+                                <div class="col-sm-6">
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="radio" name="male" id="gridRadios1" value="option1" checked>
+                                        <label class="form-check-label " for="gridRadios1">
+                                            <div>男</div>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="female" id="gridRadios2" value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            <div>女</div>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row text-left">
+                            <label for="inputComname" class="col-sm-3 col-form-label">公司名稱</label>
+                            <div class="col-sm-8">
+                                <input type="commane" class="form-control" id="inputComname" placeholder="">
+                            </div>
+                        </div>
+                        <form>
+                            <div class="form-group row text-left">
+                                <label for="inputAddress" class="col-sm-3 col-form-label">職業</label>
+                                <div class="col-sm-6">
+                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                        <option selected>請選擇...</option>
+                                        <option value="1">生產製造</option>
+                                        <option value="2">業務代表</option>
+                                        <option value="3">銷售人員</option>
+                                        <option value="4">行銷企劃 </option>
+                                        <option value="5">助理秘書</option>
+                                        <option value="6">會計出納</option>
+                                        <option value="7">技術服務 </option>
+                                        <option value="8">出版編輯 </option>
+                                        <option value="9">大眾傳播 </option>
+                                        <option value="10">醫藥看護 </option>
+                                        <option value="11">律師及會計師類 </option>
+                                        <option value="12">藝術、美工設計 </option>
+                                        <option value="13">資訊軟體工程 </option>
+                                        <option value="14">電腦電子硬體 </option>
+                                        <option value="15">旅遊</option>
+                                        <option value="16">學生 </option>
+                                        <option value="17">家庭主婦 </option>
+                                        <option value="18">其它</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="form-group row text-left">
+                            <label for="inputCelphone" class="col-sm-3 col-form-label">行動電話</label>
+                            <div class="col-sm-8">
+                                <input type="celphone" class="form-control" id="inputCelphone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row text-left">
+                            <label for="inputPhone" class="col-sm-3 col-form-label">聯絡電話</label>
+                            <div class="col-sm-8">
+                                <input type="phone" class="form-control" id="inputPhone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row text-left">
+                            <label for="inputHone" class="col-sm-3 col-form-label">傳真電話</label>
+                            <div class="col-sm-8">
+                                <input type="hone" class="form-control" id="inputHone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row text-left">
+                            <label for="inputAddress" class="col-sm-3 col-form-label">地址(縣市)</label>
+                            <div class="col-sm-8 text-left">
+                                <form action="" method="post" name="FormCode">
+                                    <select id="County" name="County" onchange="SelZero(this.options[this.options.selectedIndex].value);">
+                                        <option value="0">請選擇縣市...</option>
+                                        <option value="1">臺北市</option>
+                                        <option value="2">基隆市</option>
+                                        <option value="3">新北市</option>
+                                        <option value="4">宜蘭縣</option>
+                                        <option value="5">新竹縣市</option>
+                                        <option value="6">桃園市</option>
+                                        <option value="7">苗栗縣</option>
+                                        <option value="8">臺中市</option>
+                                        <!-- <option value="9">臺中縣</option>-->
+                                        <option value="9">彰化縣</option>
+                                        <option value="10">南投縣</option>
+                                        <option value="11">嘉義縣市</option>
+                                        <option value="12">雲林縣</option>
+                                        <option value="13">臺南市</option>
+                                        <!-- <option value="15">臺南縣</option>-->
+                                        <option value="14">高雄市</option>
+                                        <!--<option value="17">高雄縣</option>-->
+                                        <option value="15">澎湖縣</option>
+                                        <option value="16">屏東縣</option>
+                                        <option value="17">臺東縣</option>
+                                        <option value="18">花蓮縣</option>
+                                        <option value="19">金門縣</option>
+                                        <option value="20">連江縣</option>
+                                        <option value="21">南海諸島</option>
+                                        <option value="22">釣魚台列嶼</option>
+                                    </select>
+                                    <select id="Zero" name="Zero" onChange="document.FormCode.Zip.value=this.options[this.options.selectedIndex].value;">
+                                        <option value="">請選擇縣市..</option>
+                                    </select>
+                                </form>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group row text-left">
+                            <div class="col-sm-3">地址(路巷弄號) </div>
+                            <div class="col-sm-8">
+                                <input type="addre" class="form-control" id="inputAddre" placeholder="">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row text-left">
+                            <div class="col-sm-3"> 其他</div>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <button type="submit" class="btn moment rounded mx-auto d-block">確定送出</button>
+                        </div>
+                    </form>
+                    <p class="pb-5 "></p>
+                </div>
+                <hr class="hr_every">
+                <a href="javascript:history.back()">
+                    <div class="text-center">
+                        <img src="images/up_gold.png" class="rounded" alt="..."></div>
+                </a>
+                <p class="pb-5 "></p>
+                <p class="pb-5 "></p>
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+    </div>
+    <!-- 轉換圖片 -->
+    <!-- mx-auto 好一找-->
+
+    <!-- footer -->
+    <div class="container-fluid">
+        <div class="row index_bg">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+
+                <a href="index.html"> <img src="images/logo.png" class="img-fluid pt-3" alt="Responsive image" /></a>
+                <hr class="hr_down">
+                <div class="row pr-4 pl-4 b101_text">
+                    <div class="col-md-1-7 col-sm-1-7 col-xs-1-7">
+                        <a href="index.html#a1">
+                            <div class="t">企業概況</div>
+                        </a>
+                        <a href="indust1.html">
+                            <div class="link_color">公司簡介</div>
+                        </a>
+                        <a href="indust2.html">
+                            <div class="link_color">投資策略</div>
+                        </a>
+                        <a href="indust3.html">
+                            <div class="link_color">我們優勢</div>
+                        </a>
+                    </div>
+                    <div class="col-md-1-7 col-sm-1-7 col-xs-1-7">
+                        <a href="index.html#b1">
+                            <div class="t">資質認證</div>
+                        </a>
+                        <a href="quality1.html">
+                            <div class="link_color">持牌認證</div>
+                        </a>
+                        <a href="quality2.html">
+                            <div class="link_color">資金保管</div>
+                        </a>
+                        <a href="quality3.html">
+                            <div class="link_color">合規風控</div>
+                        </a>
+                    </div>
+                    <div class="col-md-1-7 col-sm-1-7 col-xs-1-7">
+                        <a href="index.html#c1">
+                            <div class="t">公司實力</div>
+                        </a>
+                        <a href="company1.html">
+                            <div class="link_color">股東背景</div>
+                        </a>
+                        <a href="company2.html">
+                            <div class="link_color">團隊介紹</div>
+                        </a>
+                        <a href="company3.html">
+                            <div class="link_color">業務介紹</div>
+                        </a>
+                    </div>
+                    <div class="col-md-1-7 col-sm-1-7 col-xs-1-7">
+                        <a href="index.html#d1">
+                            <div class="t">產品相關</div>
+                        </a>
+                        <a href="product1.html">
+                            <div class="link_color">關於產品</div>
+                        </a>
+                        <a href="product2.html">
+                            <div class="link_color">交易須知</div>
+                        </a>
+                        <a href="product3.html">
+                            <div class="link_color">下載專區</div>
+                        </a>
+                    </div>
+                    <div class="col-md-1-7 col-sm-1-7 col-xs-1-7">
+                        <a href="index.html#e1">
+                            <div class="t">新聞動態</div>
+                        </a>
+                        <a href="news1.html">
+                            <div class="link_color">經濟時事</div>
+                        </a>
+                        <a href="news2.html">
+                            <div class="link_color">投資理財</div>
+                        </a>
+                        <a href="news3.html">
+                            <div class="link_color">財經新聞</div>
+                        </a>
+                    </div>
+                    <div class="col-md-1-7 col-sm-1-7 col-xs-1-7">
+                        <a href="service1.html">
+                            <div class="t">客服聯繫</div>
+                        </a>
+                    </div>
+                    <div class="col-md-1-7 col-sm-1-7 col-xs-1-7">
+                        <a href="intro1.html">
+                            <div class="t">理財進入</div>
+                        </a>
+                    </div>
+                </div>
+                <hr class="hr_down">
+                <div class="text-right  b101_text_1">
+                    <small>地址：香港九龍新蒲崗旺景工業大廈14樓B-33室 / 電話：+852 2180 6739 / 傳真：+852 3914 8212 / COPYRIGHT 2019 NCD ALL RIGHTS RESERVED.</small>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+
+    <!-- /Services section -->
+    <!-- gotop 語法-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">回頁首</button>
+    <!-- gotop 語法-->
+    <!-- gotop 語法-->
+    <script>
+        // 當使用者向下移動 20px 時，箭頭秀出來
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // 當使用者點一下，就移動往上
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- gotop 語法-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/jquery.twzipcode.min.js"></script>
+
+
+</body></html>
