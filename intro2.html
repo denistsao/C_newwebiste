@@ -18,6 +18,29 @@
     <title>新中華王朝官網</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+    </script>
 </head>
 <script type="text/javascript" language="JavaScript">
     // 產生區域
@@ -30,7 +53,7 @@
         {
             document.getElementById("Zero").options[0] = new Option("請選擇縣市..", "");
         } else {
-            document.getElementById("Zero").options[0] = new Option("請選擇省分..", "0"); // 設定第一個選項
+            document.getElementById("Zero").options[0] = new Option("請選擇區域..", "0"); // 設定第一個選項
 
 
             var Zero =
@@ -40,6 +63,12 @@
                         new Array("北京市", "天津市", "上海市", "重慶市", "香港特別行政區", "澳門特別行政區", "河北省", // 3維陣列
                             "山西省", "遼寧省", "吉林省", "黑龍江省", "江蘇省", "浙江省", "安徽省", "福建省", "江西省", "山東省", "河南省", "湖北省", "湖南省", "廣東省", "海南省", "四川省",
                             "貴州省", "雲南省", "陝西省", "甘肅省", "青海省", "台灣省", "內蒙古自治區", "廣西壯族自治區", "西藏自治區", "寧夏回族自治區", "新疆維吾爾自治區"),
+                        new Array()
+                    ),
+					// 中華民國
+                    new Array( // 2維陣列
+                        new Array("台北市", "新北市", "基隆市", "宜蘭縣", "新竹縣市", "桃園市", "苗栗縣", // 3維陣列
+                            "臺中市", "彰化縣", "南投縣", "嘉義縣市", "雲林縣", "臺南市", "高雄市", "澎湖縣", "屏東縣", "臺東縣", "花蓮縣", "金門縣", "連江縣", "南海諸島", "釣魚台列嶼"),
                         new Array()
                     ),
                     // 新加坡
@@ -98,7 +127,7 @@
     }
 </script>
 
-<body>
+<body onLoad="MM_preloadImages('images/buttons/enter2.png','images/buttons/back2.png')">
     <!-- 固定在頂端-->
     <div class="sticky-top">
         <!-- 固定在頂端-->
@@ -311,13 +340,14 @@
                                     <select id="County" name="County" onchange="SelZero(this.options[this.options.selectedIndex].value);">
                                         <option value="0">請選擇國家...</option>
                                         <option value="1">中國</option>
-                                        <option value="2">新加坡</option>
-                                        <option value="3">馬來西亞</option>
-                                        <option value="4">泰國</option>
-                                        <option value="5">菲律賓</option>
-                                        <option value="6">柬埔寨</option>
-                                        <option value="7">越南</option>
-                                        <option value="8">南非</option>
+                                        <option value="2">中華民國</option>
+                                        <option value="3">新加坡</option>
+                                        <option value="4">馬來西亞</option>
+                                        <option value="5">泰國</option>
+                                        <option value="6">菲律賓</option>
+                                        <option value="7">柬埔寨</option>
+                                        <option value="8">越南</option>
+                                        <option value="9">南非</option>
                                         
                                     </select>
                                     <select id="Zero" name="Zero" onChange="document.FormCode.Zip.value=this.options[this.options.selectedIndex].value;">
@@ -343,17 +373,15 @@
                             </div>
                         </div>
 
-                        <div class="col-auto">
-                            <button type="submit" class="btn moment rounded mx-auto d-block">確定送出</button>
-                        </div>
+                        <div class="col-auto text-center">
+                        <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/buttons/enter2.png',1)"><img src="images/buttons/enter1.png" alt="" width="100" height="45" id="Image3"></a>
+                       
+                  </div>
                     </form>
                     <p class="pb-5 "></p>
                 </div>
-                <hr class="hr_every">
-                <a href="javascript:history.back()">
-                    <div class="text-center">
-                        <img src="images/up_gold.png" class="rounded" alt="..."></div>
-                </a>
+                <hr class="hr_every"><div class="text-center">
+                  <a href="javascript:history.back()" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/buttons/back2.png',1)"><img src="images/buttons/back1.png" alt="" width="100" height="45" id="Image7"></a> </div>
                 <p class="pb-5 "></p>
                 <p class="pb-5 "></p>
             </div>

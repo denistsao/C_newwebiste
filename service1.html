@@ -18,9 +18,32 @@
     <title>新中華王朝官網</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+    </script>
 </head>
 
-<body>
+<body onLoad="MM_preloadImages('images/buttons/enter2.png','images/buttons/back2.png')">
     <!-- 固定在頂端-->
     <div class="sticky-top">
         <!-- 固定在頂端-->
@@ -129,62 +152,62 @@
                 <hr class="hr_every ">
                 <div class=" pt-4 pb-5"><span class="answer_2">請留下相關問題及資料，我們將儘快與您聯絡，謝謝。<br>紅色※號為必填欄位</span></div>
                 <div class="form-group row">
-                    <label for="inputName" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>聯絡人</label>
+                    <label for="inputName" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>　聯絡人</label>
                     <div class="col-sm-9">
                         <input type="contact" class="form-control" id="inputName" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputtTel" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>聯絡電話</label>
+                    <label for="inputtTel" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>　聯絡電話</label>
                     <div class="col-sm-9">
                         <input type="contact-tel" class="form-control" id="inputTel" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputCell" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>行動電話 </label>
+                    <label for="inputCell" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>　行動電話 </label>
                     <div class="col-sm-9">
                         <input type="contact-celltel" class="form-control" id="inputCell" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>電子郵件 </label>
+                    <label for="inputEmail" class="col-sm-3 col-form-label answer_1"><span class="answer_2">※</span>　電子郵件 </label>
                     <div class="col-sm-9">
                         <input type="contact-email" class="form-control" id="inputEmail" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputAddress" class="col-sm-3 col-form-label answer_1">　聯絡地址 </label>
+                    <label for="inputAddress" class="col-sm-3 col-form-label answer_1">　　聯絡地址 </label>
                     <div class="col-sm-9">
                         <input type="contact-address" class="form-control" id="inputAddress" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputComname" class="col-sm-3 col-form-label answer_1">　公司名稱 </label>
+                    <label for="inputComname" class="col-sm-3 col-form-label answer_1">　　公司名稱 </label>
                     <div class="col-sm-9">
                         <input type="contact-name" class="form-control" id="inputCimname" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputWith" class="col-sm-3 col-form-label answer_1">　公司營業性質 </label>
+                    <label for="inputWith" class="col-sm-3 col-form-label answer_1">　　公司營業性質 </label>
                     <div class="col-sm-9">
                         <input type="contact-with" class="form-control" id="inputWith" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputCon" class="col-sm-3 col-form-label answer_1">　部門 </label>
+                    <label for="inputCon" class="col-sm-3 col-form-label answer_1">　　部門 </label>
                     <div class="col-sm-9">
                         <input type="contact-con" class="form-control" id="inputCon" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputCall" class="col-sm-3 col-form-label answer_1">　職稱</label>
+                    <label for="inputCall" class="col-sm-3 col-form-label answer_1">　　職稱</label>
                     <div class="col-sm-9">
                         <input type="contact-call" class="form-control" id="inputCall" placeholder="">
                     </div>
                 </div>
                 <fieldset class="form-group  answer_1">
                     <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0">　洽詢事項</legend>
+                        <legend class="col-form-label col-sm-3 pt-0">　　洽詢事項</legend>
                         <div class="col-sm-9">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -213,19 +236,17 @@
                         </div>
                     </div>
                 </fieldset>
-                <div><span class="answer_2">※</span><span class="answer_1">問題闡述</span></div>
+                <div><span class="answer_2">※</span><span class="answer_1">　問題闡述</span></div>
                 <div class="form-group">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn moment rounded mx-auto d-block">送出</button>
+                <div class="col-auto text-center">
+                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/buttons/enter2.png',1)"><img src="images/buttons/enter1.png" alt="" width="100" height="45" id="Image3"></a>
+                
                 </div>
                 <p class="pb-5 "></p>
-                <hr class="hr_every">
-                <a href="javascript:history.back()">
-                    <div class="text-center">
-                        <img src="images/up_gold.png" class="rounded" alt="..."></div>
-                </a>
+                <hr class="hr_every"><div class="text-center">
+                  <a href="javascript:history.back()" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/buttons/back2.png',1)"><img src="images/buttons/back1.png" alt="" width="100" height="45" id="Image7"></a></div>
                 <p class="pb-5 "></p>
                 <p class="pb-5 "></p>
             </div>

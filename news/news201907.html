@@ -18,10 +18,32 @@
     <title>新中華王朝官網</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
 
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+    </script>
 </head>
 
-<body>
+<body onLoad="MM_preloadImages('../images/buttons/back2.png')">
     <!-- 固定在頂端-->
     <div class="sticky-top">
         <!-- 固定在頂端-->
@@ -146,11 +168,8 @@
                     最新統計出爐，果然2018年自提人數暴增九萬餘人，創史上增幅最大，為往年四、五倍以上。自提人數衝破50萬人，總數52萬326人，若以該年度提繳人數677.7萬人計算，自提比率大幅增加到7.6%，較前一年的6.5%，增加1.1個百分點，自提比率也是創新高。勞工退休基金投資績效影響自提人數變化，觀察歷年勞退自提人數變化，也可發現與勞退新制基金投資收益呈現正相關，每當基金投資績效愈好，隔年自提人數增加明顯。例如2009年、2013年、2014年，基金收益都突破5%以上，連帶隔年勞退自提人數都明顯增加，例如2010年增加4.6萬人，2015年增加3萬餘人。近幾年2016年、2017年基金連續創下佳績，自提人數分別增加2.7萬人、9萬人。勞退新制自提可以享受稅賦優惠及收益分配，因此參加自提人數逐年增加。數據顯示，2018年勞退新制提繳人數677.7萬餘人中，雇主提撥平均工資只有3萬8288元，但個人自提平均工資高達6萬4274元，顯示參加自提的勞工屬於薪資水準較高族群。若屬受委任工作者，如總經理、經理人等，平均自提工資更高達12.6萬元。
                 </p>
                 <p class="pb-5 "></p>
-                <hr class="hr_every">
-                <a href="javascript:history.back()">
-                    <div class="text-center">
-                        <img src="../images/up_gold.png" class="rounded" alt="..."></div>
-                </a>
+                <hr class="hr_every"><div class="text-center">
+                  <a href="javascript:history.back()" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','../images/buttons/back2.png',1)"><img src="../images/buttons/back1.png" alt="" width="100" height="45" id="Image4"></a></div>
                 <p class="pb-5 "></p>
                 <p class="pb-5 "></p>
             </div>
