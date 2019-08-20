@@ -74,7 +74,7 @@
 
         if (strCode == 0) // 第一個條件如果 縣市 選擇第一個的話則新增一個 Option
         {
-            document.getElementById("Zero").options[0] = new Option("請選擇縣市..", "");
+            document.getElementById("Zero").options[0] = new Option("請選擇區域..", "");
         } else {
             document.getElementById("Zero").options[0] = new Option("請選擇區域..", "0"); // 設定第一個選項
             var Zero =
@@ -290,7 +290,7 @@
                             <div class="row">
                                 <legend class="col-form-label col-sm-3 pt-0">　　性別</legend>
                                 <div class="form-check form-check-inline">　
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" 　checked>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"　checked>
                                     <label class="form-check-label" for="inlineRadio1">先生</label>
                                 </div>
                                 <div class="form-check form-check-inline">
@@ -348,13 +348,13 @@
                             </div>
                         </div>
                         <div class="form-group row text-left">
-                            <label for="inputHone" class="col-sm-3 col-form-label">　　傳真電話</label>
+                            <label for="inputHome" class="col-sm-3 col-form-label">　　傳真電話</label>
                             <div class="col-sm-8">
                                 <input type="hone" class="form-control" id="inputHone" placeholder="">
                             </div>
                         </div>
                         <div class="form-group row text-left">
-                            <label for="inputAddress" class="col-sm-3 col-form-label">　　地址</label>
+                            <label for="inputAddress1" class="col-sm-3 col-form-label">　　地址</label>
                             <div class="col-sm-8 text-left">
                                 <form action="" method="post" name="FormCode">
                                     <select id="County" name="County" onchange="SelZero(this.options[this.options.selectedIndex].value);">
@@ -378,7 +378,7 @@
                         <div class="form-group row text-left">
                             <div class="col-sm-3">　　地址 </div>
                             <div class="col-sm-8">
-                                <input type="addre" class="form-control" id="inputAddre" placeholder="">
+                                <input type="address" class="form-control" id="inputAddre" placeholder="">
                             </div>
                         </div>
                         <div class="form-group row text-left">
